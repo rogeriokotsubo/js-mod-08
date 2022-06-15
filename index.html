@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta property="og:description" content="Alpha Ed/tech - Módulo 07 - JavaScript - Parte 08" />
+    <meta property="og:url" content="https://rogeriokotsubo.github.io/js-mod-08/" />
+    <meta property="og:determiner" content="a" />
+    <meta property="og:locale" content="pt_BR" /> 
+    <title>JS - Modulo 07 - Parte 08</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav id="menu">
+          <a class="a-menu" href="./index.html">Exercício 1</a>
+          <a class="a-menu" href="./page2.html">Exercício 2</a>
+          <a class="a-menu" href="./page3.html">Exercício 3</a>
+          <a class="a-menu" href="./page4.html">Exercício 4</a>
+          <a class="a-menu" href="./page5.html">Exercício 5</a>
+      </nav>
+    </header>
+
+    <!-- CORPO DA PÁGINA -->
+    <main id="exercise1">
+      <section class="exercise">
+        <h1>Exercício 1</h1>
+        <br />
+        <p>Crie uma página web que peça ao usuário que preencha 5 dados de usuário ('Nome','Data
+          de Nascimento','Peso','Altura' e 'Gênero') por meio de um formulário, sendo armazenado 
+          em um objeto JavaScript 'user' após clique de um botão, de forma que:</p>
+        <ol class="ol-level1"> 
+          <li>O campo do 'Nome' é do tipo string e será armazenado no formato string;</li>
+          <li>A 'Data de Nascimento' deve ser inserida pelo usuário através de 3 campos (‘dia’, 
+            'mês' e 'ano') de forma que a seleção de não pode ser de data inexistente ou superior 
+            à data atual, sendo armazenada no formato Date;</li>        
+          <li>O 'Peso' e 'Altura' embora seja inserido no formato string deve ser armazenado no 
+            formato numérico, de forma que o peso (kg) é numérico de ponto flutuante e a altura
+            (cm) em um numérico inteiro;</li>
+          <li>O 'Gênero' deve ser capturado por meio de um campo do tipo select e armazenado 
+            em formato string;</li>
+          <li>O objeto Javascript deve conter os seguintes atributos:
+            <ol class="ol-level2"> 
+              <li>name: que armazenará o nome do usuário (formato string);</li>
+              <li>birthDate: que armazenará a data de nascimento (formato Date);</li>
+              <li>weight: que armazenará o peso em quilogramas (formato numérico float);</li>
+              <li>height: que armazenará a altura em centímetros (formato numérico int);</li>
+              <li>gender: que armazenará o gênero (formato string).</li>
+            </ol>  
+          </li>
+        </ol>
+        
+        <form id="frm-inputs">           
+            <div class="ctn-input">
+              <label class="lbl-form" for="name">Nome:</label>
+              <input type="text" id="name" name="name">
+            </div>
+            <div class="ctn-input-data">
+              <label classe="lbl-form" for="dia">Data de nascimento:</label>
+              <div class="ctn-data">
+                <input type="number" id="dia" name="dia" min="1" max="31" placeholder="dd">
+                <span>/</span>
+                <input type="number" id="mes" name="mes" min="1" max="12" placeholder="mm">
+                <span>/</span>
+                <input type="number" id="ano" name="ano" min="1920" max="2022"  placeholder="aaaa">
+              </div>
+            </div>   
+            <div class="ctn-input">
+              <label class="lbl-form" for="peso">Seu peso (em kg):</label>
+              <input type="text" id="peso" name="peso">
+            </div>
+            <div class="ctn-input">
+              <label class="lbl-form" for="altura">Sua altura (em cm):</label>
+              <input type="text" id="altura" name="altura">
+            </div>            
+            <div class="ctn-input-select">
+              <span>Gênero</span>
+              <select id="sel-gender" required>
+                <option value="" disabled selected>Gênero</option>
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+              </select>
+            </div> 
+            <div id="ctn-save">
+              <button id="btn-save" type="button">Salvar</button>
+            </div> 
+            <p id="msg"></p>           
+        </form>
+
+      </section>    
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+
+</html>

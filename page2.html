@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta property="og:description" content="Alpha Ed/tech - Módulo 07 - JavaScript - Parte 08" />
+    <meta property="og:url" content="https://rogeriokotsubo.github.io/js-mod-08/" />
+    <meta property="og:determiner" content="a" />
+    <meta property="og:locale" content="pt_BR" /> 
+    <title>JS - Modulo 07 - Parte 08</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav id="menu">
+          <a class="a-menu" href="./index.html">Exercício 1</a>
+          <a class="a-menu" href="./page2.html">Exercício 2</a>
+          <a class="a-menu" href="./page3.html">Exercício 3</a>
+          <a class="a-menu" href="./page4.html">Exercício 4</a>
+          <a class="a-menu" href="./page5.html">Exercício 5</a>
+      </nav>
+    </header>
+
+    <!-- CORPO DA PÁGINA -->
+    <main id="exercise2">
+      <section class="exercise">
+        <h1>Exercício 2</h1>
+        <br />
+        <p>Estenda o exercício anterior agora 'capturando' e 'emitindo' erros ('throw'), de forma que:</p>
+        <ol class="ol-level1"> 
+          <li>Emitir erro de 'Field “name” is invalid!' se o nome estiver sem valor preenchido ou 
+            tenha tamanho inferior a 5 caracteres;</li>
+          <li>Emitir erro 'Field “birthDate” is invalid!' se a data de nascimento for superior a data 
+            atual ou se a data for impossível (inválida);</li>        
+          <li>Emitir erro 'Field “weight” is invalid!', se não for do tipo numérico;</li>
+          <li>Emitir erro 'Field “height” is invalid!', se não for do tipo numérico e não for inteiro;</li>
+          <li>Emitir erro 'Field “gender” is invalid!', caso não seja um dos gêneros possíveis 
+            determinados por você no formulário.</li>
+        </ol>
+        
+        <form id="frm-inputs">           
+            <div class="ctn-input">
+              <label class="lbl-form" for="name">Nome:</label>
+              <input type="text" id="name" name="name">
+            </div>
+            <div class="ctn-input-data">
+              <label classe="lbl-form" for="dia">Data de nascimento:</label>
+              <div class="ctn-data">
+                <input type="number" id="dia" name="dia" min="1" max="31" placeholder="dd">
+                <span>/</span>
+                <input type="number" id="mes" name="mes" min="1" max="12" placeholder="mm">
+                <span>/</span>
+                <input type="number" id="ano" name="ano" min="1920" max="2022"  placeholder="aaaa">
+              </div>
+            </div>   
+            <div class="ctn-input">
+              <label class="lbl-form" for="peso">Seu peso (em kg):</label>
+              <input type="text" id="peso" name="peso">
+            </div>
+            <div class="ctn-input">
+              <label class="lbl-form" for="altura">Sua altura (em cm):</label>
+              <input type="text" id="altura" name="altura">
+            </div>            
+            <div class="ctn-input-select">
+              <span>Gênero</span>
+              <select id="sel-gender" required>
+                <option value="" disabled selected>Gênero</option>
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+              </select>
+            </div> 
+            <div id="ctn-save">
+              <button id="btn-save" type="button">Verificar</button>
+            </div> 
+            <p id="msg"></p>           
+        </form>
+
+      </section>    
+    </main>
+
+    <script src="page2.js"></script>
+  </body>
+
+</html>

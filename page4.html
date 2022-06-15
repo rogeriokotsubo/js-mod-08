@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page4.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta property="og:description" content="Alpha Ed/tech - Módulo 07 - JavaScript - Parte 08" />
+    <meta property="og:url" content="https://rogeriokotsubo.github.io/js-mod-08/" />
+    <meta property="og:determiner" content="a" />
+    <meta property="og:locale" content="pt_BR" /> 
+    <title>JS - Modulo 07 - Parte 08</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav id="menu">
+          <a class="a-menu" href="./index.html">Exercício 1</a>
+          <a class="a-menu" href="./page2.html">Exercício 2</a>
+          <a class="a-menu" href="./page3.html">Exercício 3</a>
+          <a class="a-menu" href="./page4.html">Exercício 4</a>
+          <a class="a-menu" href="./page5.html">Exercício 5</a>
+      </nav>
+    </header>
+
+
+  <!-- CORPO DA PÁGINA -->
+    <main id="exercise4">
+      <section class="exercise">
+        <h1>Exercício 4</h1>
+        <br />
+        <p>Crie uma página web que possua um formulário com 2 campos, um do tipo textarea e um 
+          botão, de forma que:</p>
+        <ol class="ol-level1"> 
+          <li>A área de texto deve permitir ao usuário inserir um texto que posteriormente será 
+            convertido em um objeto;</li>
+          <li>Ao clicar no botão deverá:
+            <ol class="ol-level2">
+              <li>Exibir um erro caso não seja possível converter o texto em um objeto 
+                JavaScript (JSON.parse), capturando o erro por meio da estrutura 'try...catch';</li>
+              <li>Caso seja possível a conversão:
+                <ol class="ol-level3">
+                  <li>Exibir uma mensagem 'Parsable JSON string!';</li>
+                  <li>Mostrar no console o objeto.</li>                    
+                </ol> 
+              </li>    
+            </ol> 
+          </li>    
+        </ol>
+        <div class="ctn-input">
+          <form id="frm-inputs"> 
+            <textarea id="txt-area" rows="22" cols="70"></textarea>                  
+          </form>
+          <button id="btn-jsonparse" type="button">Parse</button>
+          <h3 id="mensagem"></h3>
+        </div>    
+      </section>    
+    </main>
+
+    <script src="page4.js"></script>
+  </body>
+
+</html>
